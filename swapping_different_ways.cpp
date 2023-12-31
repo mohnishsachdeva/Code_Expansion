@@ -1,3 +1,7 @@
+
+
+
+
 // swapping of two numbers with temporary variable
 #include<iostream>
 using namespace std;
@@ -25,6 +29,11 @@ num1 = 22, num2 = 33
 After swapping.
 num1 = 33, num2 = 22
 */
+
+
+
+
+
 
 //***************************************************************************************************************************
 
@@ -94,7 +103,7 @@ After swapping.
 a = 6, b = 3
 */
 
-// //***************************************************************************************************************************
+//***************************************************************************************************************************
 
 // swapping of two numbers without temporary variable
 // swapping of two numbers Xor bitwise operator 
@@ -107,17 +116,45 @@ int main()
     int x = 3, y = 6;
 
     cout << "Before swapping." << endl;
-    cout << "x = " <<  y<< ", x = " << y << endl;
+    cout << "x = " <<  x<< ", y = " << y << endl;
 
-// using multiplication and division for swapping
-  //swapping using bitwise operator
+  //swapping using XOR bitwise operator
   x = x^y; //0000 0011 xor 0000 0110 -> x = 0000 0101 -> 5
   y = x^y; // 0000 0101 xor 0000 0110 -> y = 0000 0011 -> 3
   x = x^y; // 0000 0101 xor 0000 0011 -> x = 0000 0110 - > 6
 
 
     cout << "\nAfter swapping." << endl;
-    cout << "x = " <<  y<< ", x = " << y << endl;
+   cout << "x = " <<  x<< ", y = " << y << endl;
+
+    return 0;
+}
+/* 
+Output
+Before swapping.
+x = 3, y = 6
+x = 6, y = 3
+*/
+
+//***************************************************************************************************************************
+
+// swapping of two numbers without temporary variable
+// swapping of two numbers in a single line
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    
+    int x = 3, y = 6;
+
+    cout << "Before swapping." << endl;
+    cout << "x = " <<  x<< ", y = " << y << endl;
+
+    x = y-x+(y=x); 
+
+    cout << "\nAfter swapping." << endl;
+    cout << "x = " <<  x<< ", y = " << y << endl;
 
     return 0;
 }
